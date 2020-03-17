@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.EventsPages.TezinaEventPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="60" Padding="0,40,0,0">
+        <Grid BackgroundColor="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Color="Green" Grid.Row="0" Grid.ColumnSpan="2"/>
+            <Label Text="Vaganje" Grid.Row="0" Grid.ColumnSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" TextColor="Black"/>
+            <Label Text="Težina" Grid.Row="1" Grid.Column="0" HorizontalOptions="End"/>
+            <Label Text="{Binding Izmjerena_Težina}" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Datum" Grid.Row="3" Grid.Column="0" HorizontalOptions="End"/>
+            <Label Text="{Binding Datum}" Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

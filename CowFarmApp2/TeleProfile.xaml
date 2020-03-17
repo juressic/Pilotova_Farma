@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.TeleProfile">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Bolestan" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Nedostaje oznaka" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Izmjerena Težina" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Odbačen" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Stvori Događaj" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Smrt" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Izbriši" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Dodaj Tag" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <!--Profile Info-->
+        <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Margin="60">
+            <Grid BackgroundColor="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Broj Životinje" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="Broj_Životinje" Text="{Binding BrojŽivotinje}"  Grid.Row="0" Grid.Column="1"/>
+                <!--<Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>-->
+            </Grid>
+
+            <!--Status Info-->
+            <Grid HorizontalOptions="Center" BackgroundColor="WhiteSmoke" Margin="0,50,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="STATUS"  Grid.Row="0" Grid.Column="0"/>
+                <!--<Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>-->
+            </Grid>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

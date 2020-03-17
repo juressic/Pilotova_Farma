@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.EventsPages.GravidnostPopUpView"
+            xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <ContentPage.Content>
+        <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="AUTO"/>
+                    <ColumnDefinition Width="AUTO"/>
+                </Grid.ColumnDefinitions>
+                
+            <!--<Label Text="Datum začeća" Grid.Row="0" Grid.Column="0"/>
+            <DatePicker x:Name="DatumZaćećaEntry" Grid.Row="0" Grid.Column="1"/>-->
+                
+            <Label Text="Dana gravidnosti" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="DanaGravidnostiEntry" Text="0" Grid.Row="0" Grid.Column="1" Keyboard="Numeric"/>
+
+            <Label Text="Datum pregleda" Grid.Row="1" Grid.Column="0"/>
+            <DatePicker x:Name="DatumPregledaEntry" Grid.Row="1" Grid.Column="1"/>
+
+                <!--<Label Text="Datum teljenja" Grid.Row="1" Grid.Column="0"/>
+            <DatePicker x:Name="DatumTeljenjaEntry" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Dana gravidnosti" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="DanaGravidnostiEntry" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center"/>-->
+
+            <Button  Text="Ok" Clicked="OK_Button_Clicked" Grid.Row="2" Grid.ColumnSpan="2"/>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</pages:PopupPage>

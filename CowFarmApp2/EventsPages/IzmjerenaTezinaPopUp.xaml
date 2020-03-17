@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.EventsPages.IzmjerenaTezinaPopUp"
+            xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <StackLayout Padding="60"  BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+        <Entry x:Name="TezinaEntry" Placeholder="Težina" HorizontalOptions="CenterAndExpand"/>
+        <DatePicker x:Name="TezinaDatePicker" HorizontalOptions="CenterAndExpand"/>
+        <Button  Text="Ok" Clicked="Weight_Button_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+</pages:PopupPage>

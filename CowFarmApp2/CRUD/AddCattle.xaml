@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.AddCattle">
+
+    <ScrollView HorizontalOptions="Center">
+        <Grid RowSpacing="5" ColumnSpacing="0" Padding="50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--<BoxView BackgroundColor="Green" Grid.Row="0" Grid.Column="0"/>
+            <BoxView BackgroundColor="Yellow" Grid.Row="0" Grid.Column="1"/>
+            <BoxView BackgroundColor="Yellow" Grid.Row="1" Grid.Column="0"/>
+            <BoxView BackgroundColor="Green" Grid.Row="1" Grid.Column="1"/>
+            <BoxView BackgroundColor="Green" Grid.Row="2" Grid.Column="0"/>
+            <BoxView BackgroundColor="Yellow" Grid.Row="2" Grid.Column="1"/>
+            <BoxView BackgroundColor="Yellow" Grid.Row="3" Grid.Column="0"/>
+            <BoxView BackgroundColor="Green" Grid.Row="3" Grid.Column="1"/>
+            <BoxView BackgroundColor="Green" Grid.Row="4" Grid.Column="0"/>
+            <BoxView BackgroundColor="Yellow" Grid.Row="4" Grid.Column="1"/>-->
+
+
+            <Label Text="Broj Životinje" Grid.Row="1" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="BrojŽivotinjeEntry" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Redni Broj" Grid.Row="2" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="RedniBrojEntry" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Text="Remen" Grid.Row="3" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="RemenEntry" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Text="IKG Broj" Grid.Row="4" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="IKGBrojEntry" Grid.Row="4" Grid.Column="1"/>
+
+            <Label Text="JIBG" Grid.Row="5" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="JibgEntry" Grid.Row="5" Grid.Column="1"/>
+            
+            <Label x:Name="SpolEntry" Text="Spol" Grid.Row="6" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="GenderPicker" Grid.Row="6" Grid.Column="1"/>
+            <Label Text="Rasa" Grid.Row="7" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="RacePicker" Grid.Row="7" Grid.Column="1"/>
+            <Label Text="Uzrast" Grid.Row="8" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="UzrastPicker" Grid.Row="8" Grid.Column="1"/>
+            
+            <!--Datum Rođenja-->
+            <Label Text="Datum Rođenja" Grid.Row="9" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="Datum_Rođenja_DateLabel" 
+                   Grid.Row="9" Grid.Column="1" FontSize="20" 
+                   Text="{Binding Path=Date, StringFormat='{0:yyyy-MM-dd}'}" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Transparent"
+                   IsReadOnly="True"/>
+            <!--<Label x:Name="Datum_Rođenja_DateLabel"
+                   Text="{Binding Path=Date, StringFormat='{0:yyyy-MM-dd}'}" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20" Grid.Row="6" Grid.Column="1"/>-->
+            <!--<BoxView HeightRequest="1" WidthRequest="148" Grid.Row="6" Grid.Column="1" Color="Black"  VerticalOptions="End" TranslationY="-7" HorizontalOptions="Center"  />-->
+            <DatePicker x:Name="RođenjeDatePicker" Format="dd-MM-yyyy" Grid.Row="9" Grid.Column="1" DateSelected="RođenjeDatePicker_DateSelected" Opacity="0"/>
+            
+            <!--<Label Text="Datum Migracije" Grid.Row="8" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <DatePicker x:Name="MigracijaDatePicker" Grid.Row="8" Grid.Column="1"/>-->
+            <Label Text="Majka" Grid.Row="10" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="MajkaEntry" Grid.Row="10" Grid.Column="1"/>
+            <Label Text="Otac" Grid.Row="11" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="OtacEntry" Grid.Row="11" Grid.Column="1"/>
+            <Label Text="Lokacija" Grid.Row="12" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="FarmaEntry" Placeholder="Farma" Grid.Row="12" Grid.Column="1"/>
+            <Entry x:Name="MjestoEntry" Placeholder="Mjesto" Grid.Row="13" Grid.Column="1"/>
+            <Entry x:Name="BoxEntry" Placeholder="Box" Grid.Row="14" Grid.Column="1"/>
+            <Label Text="Tezina" Grid.Row="15" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="TezinaEntry" Grid.Row="15" Grid.Column="1"/>
+            <Label Text="Vlasnik" Grid.Row="16" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="VlasnikEntry" Grid.Row="16" Grid.Column="1"/>
+
+            <Label Text="Aktivnost" Grid.Row="17" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="AktivnostPicker" Grid.Row="17" Grid.Column="1"/>
+
+
+            <!--DOLAZAK NA GOSPODARSTVO-->
+            <Label Text="DOLAZAK NA GOSPODARSTVO" FontSize="20" Padding="0,40,0,0" Grid.Row="18" Grid.Column="0"/>
+            <!--DATUM-->
+            <Label Text="Datum Dolaska" Grid.Row="19" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="Datum_Dolaska_DateLabel"
+                   Text="{Binding Path=Date, StringFormat='{0:yyyy-MM-dd}'}" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Transparent"
+                   FontSize="20" Grid.Row="19" Grid.Column="1"
+                   IsReadOnly="True"/>
+            <!--<Label x:Name="Datum_Dolaska_DateLabel"
+                   Text="{Binding Path=Date, StringFormat='{0:yyyy-MM-dd}'}" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20" Grid.Row="15" Grid.Column="1"/>
+            <BoxView HeightRequest="1" WidthRequest="148" Grid.Row="15" Grid.Column="1" Color="Black"  VerticalOptions="End" TranslationY="-7" HorizontalOptions="Center"  />-->
+            <DatePicker x:Name="DolazakDatePicker" Grid.Row="19" Grid.Column="1" DateSelected="DolazakDatePicker_DateSelected" Opacity="0"/>
+            
+            <Label Text="Stari Vlasnik" Grid.Row="20" Grid.Column="0" FontSize="20"/>
+            <Entry x:Name="StariVlasnikEntry" Grid.Row="20" Grid.Column="1"/>
+
+            <!--ODLAZAK SA GOSPODARSTVA-->
+            <Label Text="ODLAZAK SA GOSPODARSTVA" FontSize="20" Padding="0,40,0,0" Grid.Row="21" Grid.Column="0"/>
+
+            <!--DATUM-->
+            <Label Text="Datum Odlaska" Grid.Row="22" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="Datum_Odlaska_DateLabel"
+                   Text="{Binding Path=Date, StringFormat='{0:yyyy-MM-dd}'}" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Transparent"
+                   FontSize="20" Grid.Row="22" Grid.Column="1"
+                   IsReadOnly="True"/>
+            <!--<Label x:Name="Datum_Odlaska_DateLabel"
+                   Text="{Binding Path=Date, StringFormat='{0:yyyy-MM-dd}'}" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20" Grid.Row="18" Grid.Column="1"/>
+            <BoxView HeightRequest="1" WidthRequest="148" Grid.Row="18" Grid.Column="1" Color="Black"  VerticalOptions="End" TranslationY="-7" HorizontalOptions="Center"  />-->
+            <DatePicker x:Name="OdlazakDatePicker" Grid.Row="22" Grid.Column="1" DateSelected="OdlazakDatePicker_DateSelected" Opacity="0"/>
+
+
+            <Label Text="Mjesto Odlaska" Grid.Row="23" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="MjestoOdlaskaEntry" Grid.Row="23" Grid.Column="1" VerticalOptions="Center"/>
+
+            <Label Text="Način Odlaska" Grid.Row="24" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="NačinOdlaskaPicker" Grid.Row="24" Grid.Column="1"/>
+            <!--<Label Text="Datum Isporuke" Grid.Row="12" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <DatePicker x:Name="IsporukaDatePicker" Grid.Row="12" Grid.Column="1"/>-->
+            
+            <!--<Label Text="Datum Dolaska" Grid.Row="14" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <DatePicker x:Name="DolazakDatePicker" Grid.Row="14" Grid.Column="1"/>-->
+        </Grid>
+    </ScrollView>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" IconImageSource="save.png" Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

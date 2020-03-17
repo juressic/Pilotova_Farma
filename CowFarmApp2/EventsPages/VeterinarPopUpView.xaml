@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.EventsPages.VeterinarPopUpView"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+        <Entry x:Name="DiagnozaEntry" Placeholder="Diagnoza"/>
+        <Entry x:Name="LijecenjeEntry" Placeholder="Liječenje"/>
+        <Label Text="Datum"/>
+        <DatePicker x:Name="DatumPicker"/>
+        <Button  Text="Ok" Clicked="Vet_Button_Clicked"/>
+    </StackLayout>
+</pages:PopupPage>
+    

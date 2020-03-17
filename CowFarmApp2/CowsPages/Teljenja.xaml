@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.CowsPages.Teljenja">
+    <!--<ListView x:Name="Teljenja_List" Margin="0,5,0,0" ItemTapped="Teljenja_List_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Broj_Zivotinje}" FontSize="20" TextColor="Black" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                        <Label Text="{Binding datumZačeća}" FontSize="20" TextColor="Black" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="1"/>
+                        <Label Text="{Binding remaningDays}" FontSize="20" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="1"/>
+                        <Label Text="{Binding datumTeljenja}" FontSize="20" TextColor="Black" HorizontalOptions="End" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>-->
+
+    <ListView x:Name="Teljenja_List" Margin="0,5,0,0" ItemTapped="Teljenja_List_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition  Width="*"></ColumnDefinition>
+                            <ColumnDefinition  Width="*"></ColumnDefinition>
+                            <ColumnDefinition  Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding icon}" HeightRequest="50" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="{Binding Broj_Zivotinje}" FontSize="14" Grid.RowSpan="2" TextColor="Black" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
+
+                        <Label Text="Začeće" FontSize="17" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="2"/>
+                        <Label Text="{Binding datumZačeća}" FontSize="14" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="1" Grid.Column="2"/>
+
+                        <Label Text="Dana" FontSize="17" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="3"/>
+                        <Label Text="{Binding remaningDays}" FontSize="14" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="1" Grid.Column="3"/>
+
+                        <Label Text="Teljenje" FontSize="17" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="4"/>
+                        <Label Text="{Binding datumTeljenja}" FontSize="14" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Grid.Row="1" Grid.Column="4"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

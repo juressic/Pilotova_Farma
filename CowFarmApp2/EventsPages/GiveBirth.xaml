@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.GiveBirth"
+                xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <ScrollView HorizontalOptions="Center">
+        <Grid RowSpacing="5" ColumnSpacing="0" Padding="50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="Broj Životinje" Grid.Row="1" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="BrojŽivotinjeEntry" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Redni Broj" Grid.Row="2" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="RedniBrojEntry" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Text="Remen" Grid.Row="3" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="RemenEntry" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Text="IKG Broj" Grid.Row="4" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="IKGBrojEntry" Grid.Row="4" Grid.Column="1"/>
+
+            <Label Text="JIBG" Grid.Row="5" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="JibgEntry" Grid.Row="5" Grid.Column="1"/>
+
+            <Label x:Name="SpolEntry" Text="Spol" Grid.Row="6" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="GenderPicker" Grid.Row="6" Grid.Column="1"/>
+            <Label Text="Rasa" Grid.Row="7" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Picker x:Name="RacePicker" Grid.Row="7" Grid.Column="1"/>
+
+            <!--Datum Rođenja-->
+            <Label Text="Datum Rođenja" Grid.Row="8" Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <DatePicker x:Name="RođenjeDatePicker" Format="dd-MM-yyyy" Grid.Row="8" Grid.Column="1" /> <!--DateSelected="RođenjeDatePicker_DateSelected"-->
+
+            <Label Text="Otac" Grid.Row="9" Grid.Column="0" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Start"
+                   FontSize="20"/>
+            <Entry x:Name="OtacEntry" Grid.Row="9" Grid.Column="1"/>
+
+        </Grid>
+    </ScrollView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" IconImageSource="save.png" Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

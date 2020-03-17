@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.HeiferPages.HeiferMale">
+    <ListView x:Name="MaleHeifersListView" Margin="0,5,0,0" ItemTapped="MaleHeifersListView_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="AUTO"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding icon}" HeightRequest="50" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+                        <Label x:Name="HeiferMaleName" Text="{Binding Broj_Zivotinje}" FontSize="20" TextColor="Black" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

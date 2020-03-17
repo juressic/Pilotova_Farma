@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:CowFarmApp2.CattlePages"
+            xmlns:local1="clr-namespace:CowFarmApp2.CowsPages"
+            mc:Ignorable="d"
+             x:Class="CowFarmApp2.HomePage"
+             NavigationPage.HasNavigationBar="True"
+            NavigationPage.HasBackButton="False"
+            BarBackgroundColor="{StaticResource greenColor}">
+    <!--<NavigationPage.TitleView>
+        <SearchBar x:Name="SearchBarCattle" Placeholder="Pretraži" Margin="0,5,0,0" SearchButtonPressed="SearchButtonPressed" TextChanged="SearchBarCattle_TextChanged"/>
+    </NavigationPage.TitleView>-->
+    
+    <local:CowsAll Title="Sve Životinje"/>
+    <local:Sick Title="Veterinar"/>
+    <local:EarTag Title="Bez Oznake"/>
+    <local1:Teljenja Title="Teljenja"/>
+</TabbedPage>

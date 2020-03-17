@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CowFarmApp2.CowProfile">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Reprodukcija" Command="{Binding AddNew}" Order="Secondary" Priority="0" />
+        <ToolbarItem x:Name="SickToolBar" Order="Secondary" Priority="0" IconImageSource="Bull1.png" Clicked="Event_Bolestan_Clicked"/>
+        <ToolbarItem x:Name="EarTagBar" Text="Nedostaje oznaka" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png" Clicked="Event_OznakaUha_Clicked"/>
+        <ToolbarItem Text="Izmjerena Težina" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png" Clicked="Event_Tezina_Clicked"/>
+        <ToolbarItem Text="Odbačen" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <!--<ToolbarItem Text="Stvori Događaj" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>-->
+        <ToolbarItem Text="Smrt" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <ToolbarItem Text="Izbriši" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>
+        <!--<ToolbarItem Text="Dodaj Tag" Command="{Binding AddNew}" Order="Secondary" Priority="0" IconImageSource="Bull1.png"/>-->
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <!--Profile Info-->
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="60">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Izmjeni" BackgroundColor="Green" TextColor="White" Grid.Row="0" Grid.ColumnSpan="2" Clicked="Edit_CowProfile"/>
+                <!--<Button Text="Izbriši" BackgroundColor="Red" TextColor="White" Grid.Row="0" Grid.Column="1" Clicked="Delete_CowProfile"/>-->
+            </Grid>
+            <Grid BackgroundColor="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Broj Životinje" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="{Binding Broj_Zivotinje}" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Redni Broj" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="{Binding Redni_Broj}" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Remen" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="{Binding Remen}" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="IKG_Broj" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="{Binding IKG_Broj}" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="JIBG" Grid.Row="4" Grid.Column="0"/>
+                <Label Text="{Binding JIBG}" Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Spol" Grid.Row="5" Grid.Column="0"/>
+                <Label Text="{Binding Spol}" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Rasa" Grid.Row="6" Grid.Column="0"/>
+                <Label Text="{Binding Rasa}" Grid.Row="6" Grid.Column="1"/>
+
+                <Label Text="Uzrast" Grid.Row="7" Grid.Column="0"/>
+                <Label Text="{Binding Uzrast}" Grid.Row="7" Grid.Column="1"/>
+
+                <Label Text="Datum_Rodenja" Grid.Row="8" Grid.Column="0"/>
+                <Label Text="{Binding Datum_Rodenja}" Grid.Row="8" Grid.Column="1"/>
+
+                <Label Text="Majka" Grid.Row="9" Grid.Column="0"/>
+                <Label Text="{Binding Majka}" Grid.Row="9" Grid.Column="1"/>
+
+                <Label Text="Otac" Grid.Row="10" Grid.Column="0"/>
+                <Label Text="{Binding Otac}" Grid.Row="10" Grid.Column="1"/>
+
+                <Label Text="Farma" Grid.Row="11" Grid.Column="0"/>
+                <Label Text="{Binding Farma}" Grid.Row="11" Grid.Column="1"/>
+
+                <Label Text="Mjesto" Grid.Row="12" Grid.Column="0"/>
+                <Label Text="{Binding Mjesto}" Grid.Row="12" Grid.Column="1"/>
+
+                <Label Text="Boks" Grid.Row="13" Grid.Column="0"/>
+                <Label Text="{Binding Boks}" Grid.Row="13" Grid.Column="1"/>
+
+                <Label Text="Težina" Grid.Row="14" Grid.Column="0"/>
+                <Label Text="{Binding Tezina}" Grid.Row="14" Grid.Column="1"/>
+
+                <Label Text="Vlasnik" Grid.Row="15" Grid.Column="0"/>
+                <Label Text="{Binding Vlasnik}" Grid.Row="15" Grid.Column="1"/>
+
+                <Label Text="Aktivnost" Grid.Row="16" Grid.Column="0"/>
+                <Label Text="{Binding Aktivnost}" Grid.Row="16" Grid.Column="1"/>
+
+                <Label Text="Stari_Vlasnik" Grid.Row="17" Grid.Column="0"/>
+                <Label Text="{Binding Stari_Vlasnik}" Grid.Row="17" Grid.Column="1"/>
+
+                <Label Text="Datum_Dolaska" Grid.Row="18" Grid.Column="0"/>
+                <Label Text="{Binding Datum_Dolaska}" Grid.Row="18" Grid.Column="1"/>
+
+                <Label Text="Mjesto_Odlaska" Grid.Row="19" Grid.Column="0"/>
+                <Label Text="{Binding Mjesto_Odlaska}" Grid.Row="19" Grid.Column="1"/>
+
+                <Label Text="Datum_Odlaska" Grid.Row="20" Grid.Column="0"/>
+                <Label Text="{Binding Datum_Odlaska}" Grid.Row="20" Grid.Column="1"/>
+
+                <Label Text="Način_Odlaska" Grid.Row="21" Grid.Column="0"/>
+                <Label Text="{Binding Nacin_Odlaska}" Grid.Row="21" Grid.Column="1"/>
+                <!--<Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>-->
+            </Grid>
+            <Button Text="Događaji" Clicked="Events_Button_Clicked"/>
+            <Button Text="Potomstvo" Clicked="Calfs_Button_Clicked"/>
+
+            <!--Status Info-->
+            <!--<Grid HorizontalOptions="Center" BackgroundColor="WhiteSmoke" Margin="0,50,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="STATUS"  Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Birth Date" Grid.Row="0" Grid.Column="0"/>
+            </Grid>-->
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
