@@ -6,19 +6,19 @@
              mc:Ignorable="d"
              x:Class="CowFarmApp2.MainPage">
 
-    <!--<ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Margin="50,0,50,0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="Cow.png" Aspect="AspectFit" Scale="0.7"/>
+            <!--<Image BackgroundColor="Black" />-->
+            <Entry Placeholder="Korisnik" HorizontalTextAlignment="Center" Keyboard="Email" PlaceholderColor="Gray"/>
+            <Entry Placeholder="Lozinka" HorizontalTextAlignment="Center" IsPassword="True" PlaceholderColor="Gray"/>
+            <Button x:Name="LogIn" Text="PRIJAVA" TextColor="White" Clicked="LogIn_Clicked" Margin="50,50,50,0" BackgroundColor="{StaticResource greenColor}"/>
 
-        <StackLayout>
-            <Image Aspect="AspectFit"  Source="Cow.png"/>
-            <Label Text="Kurac"/>
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="Blue"  />
         </StackLayout>
-    </ContentPage.Content>-->
-    <StackLayout Margin="50,0,50,0" VerticalOptions="Center" HorizontalOptions="Center">
-        <Image Source="Cow.png" Aspect="AspectFit" Scale="0.7"/>
-        <!--<Image BackgroundColor="Black" />-->
-        <Entry Placeholder="Korisnik" HorizontalTextAlignment="Center" Keyboard="Email" PlaceholderColor="Gray"/>
-        <Entry Placeholder="Lozinka" HorizontalTextAlignment="Center" IsPassword="True" PlaceholderColor="Gray"/>
-        <Button x:Name="LogIn" Text="PRIJAVA" TextColor="White" Clicked="LogIn_Clicked" Margin="50,50,50,0" BackgroundColor="{StaticResource greenColor}"/>
-    </StackLayout>
+
+        
+    </ContentPage.Content>
+
 
 </ContentPage>

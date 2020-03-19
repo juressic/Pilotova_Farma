@@ -32,7 +32,7 @@ namespace CowFarmApp2
         #endregion
 
         public static bool remoteServerOn = true; //Switch between remote and local connection link
-        public static bool remoteServerTesting = false;
+        public static bool remoteServerTesting = true;
 
         public static bool enableEventButtons = true;
 
