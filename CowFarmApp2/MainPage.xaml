@@ -14,7 +14,7 @@
             <Entry Placeholder="Lozinka" HorizontalTextAlignment="Center" IsPassword="True" PlaceholderColor="Gray"/>
             <Button x:Name="LogIn" Text="PRIJAVA" TextColor="White" Clicked="LogIn_Clicked" Margin="50,50,50,0" BackgroundColor="{StaticResource greenColor}"/>
 
-            <ActivityIndicator x:Name="activityIndicator" IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="Blue"  />
+            <!--<ActivityIndicator x:Name="activityIndicator" IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="Blue"  />-->
         </StackLayout>
 
         
