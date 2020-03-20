@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rg.Plugins.Popup.Services;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,6 +14,12 @@ namespace CowFarmApp2 {
     public partial class LoadingSceen : PopupPage {
         public LoadingSceen() {
             InitializeComponent();
+            MessagingCenter.Subscribe<MainPage>(this, "Hi", (sender) => { OnClose(); });
+        }
+
+        private void OnClose()
+        {
+            PopupNavigation.Instance.PopAsync();
         }
 
         protected override Task OnAppearingAnimationEndAsync() {

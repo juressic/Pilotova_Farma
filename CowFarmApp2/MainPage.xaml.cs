@@ -1,4 +1,5 @@
 ﻿using CowFarmApp2.Model;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,5 +33,13 @@ namespace CowFarmApp2
                 Debug.WriteLine("COW BOLESTAN STATUS = " + c.Bolestan);
             }*/
         }
+
+        private async void LoadingBtnClicked(object sender, EventArgs args)
+        {
+            await PopupNavigation.Instance.PushAsync(new LoadingSceen());
+            await Task.Delay(2000);
+            MessagingCenter.Send<MainPage>(this, "Hi");
+        }
     }
+
 }
