@@ -82,7 +82,7 @@
                 <Label Text="{Binding Boks}" Grid.Row="13" Grid.Column="1"/>
 
                 <Label Text="Težina" Grid.Row="14" Grid.Column="0"/>
-                <Label Text="{Binding Tezina}" Grid.Row="14" Grid.Column="1"/>
+                <Label x:Name="TezinaLabel" Text="{Binding Tezina}" Grid.Row="14" Grid.Column="1"/>
 
                 <Label Text="Vlasnik" Grid.Row="15" Grid.Column="0"/>
                 <Label Text="{Binding Vlasnik}" Grid.Row="15" Grid.Column="1"/>

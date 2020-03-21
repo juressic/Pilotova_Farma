@@ -16,30 +16,35 @@ namespace CowFarmApp2
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        public static MainPage current;
+
         public MainPage()
         {
             InitializeComponent();
-            Database.UpdateDatabase();
+            current = this;
         }
 
-        private void LogIn_Clicked(object sender, EventArgs e)
+        private async void LogIn_Clicked(object sender, EventArgs e)
         {
             //Navigation.PushAsync(new HomePage());
             //Navigation.PushAsync(new MasterDetailMenu());
-            
-            App.Current.MainPage = new MasterDetailMenu();
+
+            var a = Database.UpdateDatabase();
+
+            if(a.IsCompleted)
+                App.Current.MainPage = new MasterDetailMenu();
 
             /*foreach (Cattle c in Database.GetCattleLocal()) {
                 Debug.WriteLine("COW BOLESTAN STATUS = " + c.Bolestan);
             }*/
         }
 
-        private async void LoadingBtnClicked(object sender, EventArgs args)
+        /*private async void LoadingBtnClicked(object sender, EventArgs args)
         {
             await PopupNavigation.Instance.PushAsync(new LoadingSceen());
             await Task.Delay(2000);
             MessagingCenter.Send<MainPage>(this, "Hi");
-        }
+        }*/
     }
 
 }

@@ -450,7 +450,7 @@ namespace CowFarmApp2
         }*/
 
         private async void Event_Tezina_Clicked(object sender, EventArgs e) {
-            await PopupNavigation.Instance.PushAsync(new IzmjerenaTezinaPopUp());
+            await PopupNavigation.Instance.PushAsync(new IzmjerenaTezinaPopUp(TezinaLabel));
                 //PopupNavigation.Instance.PushAsync(new IzmjerenaTezinaPopUp());
             /*} else {
                 //UNSET SICK

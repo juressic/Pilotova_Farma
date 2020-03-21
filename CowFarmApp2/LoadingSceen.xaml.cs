@@ -15,6 +15,7 @@ namespace CowFarmApp2 {
         public LoadingSceen() {
             InitializeComponent();
             MessagingCenter.Subscribe<MainPage>(this, "Hi", (sender) => { OnClose(); });
+            CloseWhenBackgroundIsClicked = false;
         }
 
         private void OnClose()

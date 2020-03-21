@@ -10,6 +10,8 @@ using System.Net;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Linq;
+using Rg.Plugins.Popup.Services;
+using System.Threading.Tasks;
 
 namespace CowFarmApp2
 {
@@ -89,13 +91,18 @@ namespace CowFarmApp2
             }
         }
 
-        public static void UpdateDatabase()
+        public async static Task UpdateDatabase()
         {
+            await PopupNavigation.Instance.PushAsync(new LoadingSceen());  // LOADING SCREEN
+            
             SetCattle();
             SetVeterinarEvents();
             SetWeightEvents();
             SetGravidnostEvents();
             SetAbortusEvents();
+
+            MessagingCenter.Send<MainPage>(MainPage.current, "Hi");  // CLOSE ENDING SCREEN
+
             //SetStatusEvents();
             #region Old_Code
             /*using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

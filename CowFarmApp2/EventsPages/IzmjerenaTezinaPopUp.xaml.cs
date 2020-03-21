@@ -16,8 +16,11 @@ using Xamarin.Forms.Xaml;
 namespace CowFarmApp2.EventsPages {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class IzmjerenaTezinaPopUp : PopupPage {
-        public IzmjerenaTezinaPopUp() {
+
+        public Label tezina;
+        public IzmjerenaTezinaPopUp(Label tezinaRef) {
             InitializeComponent();
+            tezina = tezinaRef;
         }
 
         private async void Weight_Button_Clicked(object sender, EventArgs e) {
@@ -118,9 +121,9 @@ namespace CowFarmApp2.EventsPages {
                 if (response.StatusCode == System.Net.HttpStatusCode.Created) {
                     //Database.SetCattle();
                     //await Navigation.PushAsync(new HomePage());
-                }
+                } 
 
-
+                tezina.Text = TezinaEntry.Text; //UPDATE CURRENT TEZINA VALUE
 
             } catch {
                 Debug.WriteLine("KOJI KURAC");

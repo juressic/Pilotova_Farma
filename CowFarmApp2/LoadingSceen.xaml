@@ -19,9 +19,7 @@
       EasingOut="SinIn"
       HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White" >
-
-                    <ActivityIndicator Color="Green" IsRunning="True" VerticalOptions="Center"/>
-
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White" >
+        <ActivityIndicator Color="Green" IsRunning="True" VerticalOptions="Center"/>
     </StackLayout>
 </pages:PopupPage>
