@@ -43,6 +43,7 @@ namespace CowFarmApp2
             //Database.cattleData.CollectionChanged += CattleCountShow;
             Database.cattleDataSelected.CollectionChanged += CattleCountShow;
 
+            AddCattle.IsEnabled = App.enableEventButtons;
 
         }
 

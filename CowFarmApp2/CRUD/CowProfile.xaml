@@ -28,7 +28,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Text="Izmjeni" BackgroundColor="Green" TextColor="White" Grid.Row="0" Grid.ColumnSpan="2" Clicked="Edit_CowProfile"/>
+                <Button x:Name="IzmjeniBtn" Text="Izmjeni" BackgroundColor="Green" TextColor="White" Grid.Row="0" Grid.ColumnSpan="2" Clicked="Edit_CowProfile"/>
                 <!--<Button Text="Izbriši" BackgroundColor="Red" TextColor="White" Grid.Row="0" Grid.Column="1" Clicked="Delete_CowProfile"/>-->
             </Grid>
             <Grid BackgroundColor="WhiteSmoke">

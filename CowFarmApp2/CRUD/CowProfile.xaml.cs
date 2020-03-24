@@ -49,6 +49,8 @@ namespace CowFarmApp2
                 if (c.Majka == App.currentCattle.Broj_Zivotinje)
                     App.currentCattle.potomci.Add(c);
             }
+
+            IzmjeniBtn.IsEnabled = App.enableEventButtons;
             
         }
 
@@ -89,10 +91,9 @@ namespace CowFarmApp2
             ToolbarItems.Clear();
             toolbarItems.Clear();
             //REPRODUKCIJA
-            Gravidnost = new ToolbarItem(); Gravidnost.Text = "Gravidnost"; Gravidnost.Order = ToolbarItemOrder.Secondary; Gravidnost.Clicked += Event_Gravidnost_Clicked;
+            Gravidnost = new ToolbarItem(); Gravidnost.Text = "Gravidnost"; Gravidnost.Order = ToolbarItemOrder.Secondary; Gravidnost.Clicked += Event_Gravidnost_Clicked; Gravidnost.IsEnabled = App.enableEventButtons;
             Rođenje = new ToolbarItem(); Rođenje.Text = "Rođenje"; Rođenje.Order = ToolbarItemOrder.Secondary; Rođenje.Clicked += Event_Rođenje_Clicked; Rođenje.IsEnabled = App.enableEventButtons;
-            Abortus = new ToolbarItem(); Abortus.Text = "Abortus"; Abortus.Order = ToolbarItemOrder.Secondary; Abortus.Clicked += Event_Abortus_Clicked;
-
+            Abortus = new ToolbarItem(); Abortus.Text = "Abortus"; Abortus.Order = ToolbarItemOrder.Secondary; Abortus.Clicked += Event_Abortus_Clicked; Abortus.IsEnabled = App.enableEventButtons;
             Bolestan = new ToolbarItem(); Bolestan.Order = ToolbarItemOrder.Secondary; Bolestan.Clicked += Event_Bolestan_Clicked; Bolestan.IsEnabled = App.enableEventButtons;
             if (App.currentCattle.Bolestan == "DA")
                 Bolestan.Text = "Nije Bolestan";
@@ -106,8 +107,8 @@ namespace CowFarmApp2
             ToolbarItem Težina = new ToolbarItem(); Težina.Text = "Izmjerena Težina"; Težina.Order = ToolbarItemOrder.Secondary; Težina.Clicked += Event_Tezina_Clicked; Težina.IsEnabled = App.enableEventButtons;
             ToolbarItem Odbačen = new ToolbarItem(); Odbačen.Text = "Odbačen"; Odbačen.Order = ToolbarItemOrder.Secondary; Odbačen.IsEnabled = false;
             ToolbarItem Smrt = new ToolbarItem(); Smrt.Text = "Smrt"; Smrt.Order = ToolbarItemOrder.Secondary; Smrt.IsEnabled = false;
-            ToolbarItem Izbriši = new ToolbarItem(); Izbriši.Text = "Izbriši"; Izbriši.Order = ToolbarItemOrder.Secondary; Izbriši.Clicked += Event_Delete_Cattle;
-            ToolbarItem Mikrolokacija = new ToolbarItem(); Mikrolokacija.Text = "Promjena Mikrolokacije"; Mikrolokacija.Order = ToolbarItemOrder.Secondary; Mikrolokacija.Clicked += Event_Promjena_Mikrolokacije;
+            ToolbarItem Izbriši = new ToolbarItem(); Izbriši.Text = "Izbriši"; Izbriši.Order = ToolbarItemOrder.Secondary; Izbriši.Clicked += Event_Delete_Cattle; Izbriši.IsEnabled = App.enableEventButtons;
+            ToolbarItem Mikrolokacija = new ToolbarItem(); Mikrolokacija.Text = "Promjena Mikrolokacije"; Mikrolokacija.Order = ToolbarItemOrder.Secondary; Mikrolokacija.Clicked += Event_Promjena_Mikrolokacije; Mikrolokacija.IsEnabled = App.enableEventButtons;
 
             if (App.currentCattle.Uzrast == "Krava" || App.currentCattle.Uzrast == "Junica") {
                 if (App.currentCattle.Gravidnost != "DA")

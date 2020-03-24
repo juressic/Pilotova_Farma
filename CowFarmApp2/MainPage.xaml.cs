@@ -22,6 +22,7 @@ namespace CowFarmApp2
         {
             InitializeComponent();
             current = this;
+            Database.UpdateDatabase();
         }
 
         private async void LogIn_Clicked(object sender, EventArgs e)
@@ -29,9 +30,9 @@ namespace CowFarmApp2
             //Navigation.PushAsync(new HomePage());
             //Navigation.PushAsync(new MasterDetailMenu());
 
-            var a = Database.UpdateDatabase();
+            //var a = Database.UpdateDatabase();
 
-            if(a.IsCompleted)
+            //if(a.IsCompleted)
                 App.Current.MainPage = new MasterDetailMenu();
 
             /*foreach (Cattle c in Database.GetCattleLocal()) {
