@@ -34,7 +34,7 @@ namespace CowFarmApp2
         public static bool remoteServerOn = true; //Switch between remote and local connection link
         public static bool remoteServerTesting = true;
 
-        public static bool enableEventButtons = true;
+        public static bool enableEventButtons = false;
 
         public static string localhostAddress = "localhost"; //10.0.2.2 / localhost
 

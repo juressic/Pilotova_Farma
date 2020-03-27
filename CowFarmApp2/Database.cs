@@ -101,7 +101,7 @@ namespace CowFarmApp2
             SetGravidnostEvents();
             SetAbortusEvents();
 
-            MessagingCenter.Send<MainPage>(MainPage.current, "Hi");  // CLOSE ENDING SCREEN
+            //MessagingCenter.Send<MainPage>(MainPage.current, "Hi");  // CLOSE ENDING SCREEN
 
             //SetStatusEvents();
             #region Old_Code
@@ -141,8 +141,9 @@ namespace CowFarmApp2
         }
 
         #region CATTLE DATA REGION
-        public static async void SetCattle()
+        public static async Task SetCattle()
         {
+
             Debug.WriteLine("SET CATTLE");
             try
             {
@@ -179,6 +180,7 @@ namespace CowFarmApp2
                     //LOCAL CONNECTION WIN
                     result = await client2.GetStringAsync("http://" + App.localhostAddress + "/pilotova-farma/api/govedo/get_auto_increment.php");
                 }
+
 
                 Debug.WriteLine("IDEMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
                 string autoincrement = string.Join("", result.ToCharArray().Where(Char.IsDigit));
@@ -304,6 +306,7 @@ namespace CowFarmApp2
                     {
                         Debug.WriteLine("This cattle race = " + p.Rasa);
                     }*/
+                    MessagingCenter.Send<MainPage>(MainPage.current, "Hi");  // CLOSE ENDING SCREEN
                 }
             }
             catch(Exception e)
@@ -332,6 +335,7 @@ namespace CowFarmApp2
                         cattleData.Add(item);
                     }
                 }
+                MessagingCenter.Send<MainPage>(MainPage.current, "Hi");  // CLOSE ENDING SCREEN
             }
             //Listica.ItemsSource = posts.Data;
         }
