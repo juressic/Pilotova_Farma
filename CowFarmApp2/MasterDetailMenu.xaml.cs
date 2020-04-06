@@ -254,8 +254,8 @@ namespace CowFarmApp2
         }
 
         private void CSV_Clicked(object sender, EventArgs e) {
-            string fileName = Path.Combine("/storage/emulated/0/Android/data/com.VirtualAnt.PilotovaFarma/", "cattle7.csv");
-            //string fileName = Path.Combine(Environment.GetFolderPath., "cattle7.csv");
+            //string fileName = Path.Combine("/storage/emulated/0/Android/data/com.VirtualAnt.PilotovaFarma/", "cattle7.csv");
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) , "cattle7.csv");
             //File.WriteAllText(fileName, "Hello World , Ono Tvoje ,\n ko je, a ja");
             string naslovi = "Id, Broj Životinje, Redni Broj, Remen";
             string nastavakVeterinar;

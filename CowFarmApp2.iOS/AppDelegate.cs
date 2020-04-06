@@ -33,6 +33,8 @@ namespace CowFarmApp2.iOS
 
             Rg.Plugins.Popup.Popup.Init(); //Popup init
 
+            App.mobileVersion = true;
+
             string serverConnection = App.remoteServerOn == true ? "https://pilotova-farma.banovina-agrar.hr/pilotova-farma/api/govedo/read.php" : "http://10.0.2.2/pilotova-farma/api/govedo/read.php";
             LoadApplication(new App(fullPath, serverConnection));
 

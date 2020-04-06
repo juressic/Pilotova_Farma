@@ -31,10 +31,10 @@ namespace CowFarmApp2
         public static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";*/
         #endregion
 
-        public static bool remoteServerOn = true; //Switch between remote and local connection link
+        public static bool remoteServerOn = false; //Switch between remote and local connection link
         public static bool remoteServerTesting = true;
-
-        public static bool enableEventButtons = false;
+        public static bool enableEventButtons = true;
+        public static bool mobileVersion = false;
 
         public static string localhostAddress = "localhost"; //10.0.2.2 / localhost
 
